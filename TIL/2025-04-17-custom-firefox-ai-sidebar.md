@@ -56,10 +56,12 @@ Short TLDR, not as stable as the original summarize but shorter
 
 A few minor changes is nice to do to the web ui in `llama.cpp/examples/server/webui`
  - Hide the first message (the question from the browser)
- - Uncheck the default showing of sidebar.
+ - Uncheck the default showing of sidebar. (to avoid it expanding on every query)
  - Put a custom url if running the llama.cpp frontend from vite to point to the real llama.cpp server
 
-The code changes are below:
+Since the changes are so small and the project is moving so fast I've just listen the little hacks below:
+
+So first clone the repo from [https://github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)
 
 `examples/server/webui/src/Config.ts`
 ```
@@ -83,6 +85,14 @@ The code changes are below:
 ```
    server: {
 +    port: 8059,
+```
+
+### Running the custom llama.cpp frontend
+To run in dev mode:
+```
+cd examples/server/webui
+npm install
+npm run dev
 ```
 
 # Running llama.cpp
