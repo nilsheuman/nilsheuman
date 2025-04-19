@@ -1,12 +1,13 @@
 # Custom Firefox AI Sidebar
 
+![firefox ai sidebar demo](2025-04-17-custom-firefox-ai-sidebar.gif)
+
 Firefox has a AI sidebar that can be shown with `ctrl+x` (mac) `ctrl+alt+x` (windows?).
 Once activated it appears as 'Ask AI Chatbot' in the right click menu.
 
 Currently it seems to be fairly simple, you can select text on a web page (limited length) and select a prompt to send to your AI provider.
 
-Basically what it does is to send a http request to `?q<prompt>`.
-
+Basically what it does is to send a http request to `/?q=<prompt>`.
 Different providers can be selected, localhost is not shown by default.
 So a few changes needs to be done to get that to work.
 
