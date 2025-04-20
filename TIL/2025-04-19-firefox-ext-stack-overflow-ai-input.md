@@ -6,7 +6,7 @@ With Google search results becoming less reliable, it’s easy to paste all ques
 
 I figured it would be helpful if the LLM received better input or had its output verified before generating an answer. A bit like a RAG. So, after experimenting with Tauri, Electron, and some hacking around, I finally decided to test creating a Firefox extension.
 
-Once done I found the `@web` context command in [continue.dev](https://github.com/continuedev/continue) that does something similar. There is a `@docs` context as well but not sure if checks are done to validate that methods and dependencies actually exists.
+Once done I found the `@web` context command in [continue.dev](https://github.com/continuedev/continue) for VSCode that does something similar. There is a `@docs` context as well but not sure if checks are done to validate that methods and dependencies actually exists.
 
 ## How It Works
 
@@ -87,7 +87,7 @@ Example response:
 
 ## Firefox Extension
 
-I came across an extension with a sidebar and a tab list (https://github.com/jeb5/Sidetabs/) that looked nice, so I squeezed the new code into it with a small effort.
+I came across an extension with a sidebar and a tab list [github.com/jeb5/Sidetabs](https://github.com/jeb5/Sidetabs/) that looked nice, so I squeezed the new code into it with a small effort.
 
 The same issue as with the Firefox AI sidebar appeared: since it sends a GET request with the entire query, it often gets truncated. To work around this, the extension opens a new tab to `llama.cpp`'s server, where the query is pasted directly into the text box. This allows the user to modify the prompt before submitting it.
 
