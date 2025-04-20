@@ -6,6 +6,8 @@ With Google search results becoming less reliable, it’s easy to paste all ques
 
 I figured it would be helpful if the LLM received better input or had its output verified before generating an answer. A bit like a RAG. So, after experimenting with Tauri, Electron, and some hacking around, I finally decided to test creating a Firefox extension.
 
+Once done I found the `@web` context command in [continue.dev](https://github.com/continuedev/continue) that does something similar. There is a `@docs` context as well but not sure if checks are done to validate that methods and dependencies actually exists.
+
 ## How It Works
 
 The flow is straightforward:
@@ -19,7 +21,7 @@ The concept worked, though it’s not the most convenient to use. After some tun
 
 The idea is to look for a link and an `h3` element, along with one of the hardcoded class name for the description, ensuring they share the same parent somewhere in the tree.
 
-Inspired by https://github.com/nrjdalal/google-parser
+Inspired by [github.com/nrjdalal/google-parser](https://github.com/nrjdalal/google-parser)
 
 ```typescript
 const MAGIC_DESCRIPTION_CLASS_NAME = ".VwiC3b";
@@ -111,7 +113,3 @@ Most of the code is fairly straightforward React inside `Sidebar.tsx`. The `cont
     ]
   }
 ```
-
-## Future
-
-I’ll see how useful this concept is and whether it’s worth investing more effort. Maybe something similar already exists, but I haven’t come across it. It would be great to have a RAG solution for these situations. For example, in VS Code with Continue.dev, you can add files using `@filename`. A `@stackoverflow` tag could similarly perform a search first. Also, it could verify the response by checking whether the referenced functions exist in the official documentation and that dependencies actually exists, encouraging the LLM to play by the rules.
