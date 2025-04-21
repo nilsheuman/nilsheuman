@@ -6,7 +6,9 @@ With Google search results becoming less reliable, it’s easy to paste all ques
 
 I figured it would be helpful if the LLM received better input or had its output verified before generating an answer. A bit like a RAG. So, after experimenting with Tauri, Electron, and some hacking around, I finally decided to test creating a Firefox extension.
 
-Once done I found the `@web` context command in [continue.dev](https://github.com/continuedev/continue) for VSCode that does something similar. There is a `@docs` context as well but not sure if checks are done to validate that methods and dependencies actually exists.
+Once done I found the `@web` context command in [continue.dev](https://github.com/continuedev/continue) for VSCode that does something similar, however after a deeper look it hits the continue servers [proxy](https://github.com/continuedev/continue/blob/6a9220ab0ddeb6b5830c29ea530563f6bc9091e6/core/control-plane/client.ts#L34) ([issues/4338](https://github.com/continuedev/continue/issues/4338)). There is a `@docs` context as well but not sure if checks are done to validate that methods and dependencies actually exists. Will save that for later...
+
+> **Update:** Created an small electron app to serve continue.dev with stack overflow contexts: [github.com/nilsheuman/context-provider](https://github.com/nilsheuman/context-provider). 
 
 ## How It Works
 
