@@ -2,7 +2,7 @@
 
 More and more tools are getting integrated with LLMs, but they tend to be paywalled. I thought it would be fun to try to create a simple tool that can generate graphs with LLMs without having a round trip to a backend or having it generated as an image with a multimodal model.
 
-![](2025-04-25-draw-graphs-with-llm.gif)
+![draw-graphs-with-llm-demo](2025-04-25-draw-graphs-with-llm.gif)
 
 Said and done, I continued my small efforts in extending the llama.cpp webui with a graph renderer, very simple but it works. As with much else around LLMs it's ad hoc prompt engineering, but it's a start.
 
