@@ -214,21 +214,23 @@ export const PlotViewer = ({ plotConfig }: Props) => {
       }
     });
 
+    const plotLayout = {
+        width: 640,
+        height: 480,
+        title: plotConfig.title ? { text: plotConfig.title } : { text: 'Plot' },
+        xaxis: {
+            range: [plotConfig.xMin, plotConfig.xMax]
+        },
+        yaxis: {
+            range: [plotConfig.yMin, plotConfig.yMax]
+        }
+    };
+
     return (
       <div>
         <Plot
           data={data}
-          layout={{
-            width: 640,
-            height: 480,
-            title: { text: plotConfig.title },
-            xaxis: {
-              range: [plotConfig.xMin, plotConfig.xMax]
-            },
-            yaxis: {
-              range: [plotConfig.yMin, plotConfig.yMax]
-            }
-          }}
+          layout={plotLayout}
         />
       </div>
     );
