@@ -2,6 +2,9 @@
 
 Maybe these little snippets/articles will help someone.
 
+### [Draw Graphs with LLM](2025-04-25-draw-graphs-with-llm)
+Custom prompt and some additions to the llama.cpp frontend to draw graphs directly from a prompt.
+
 ### [Firefox Extension For Stack Overflow RAG](2025-04-19-firefox-ext-stack-overflow-ai-input)
 Some snippets around inputing correct answers into LLM chats with a Firefox extension.
 
