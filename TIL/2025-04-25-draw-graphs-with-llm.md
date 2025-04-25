@@ -221,7 +221,7 @@ export const PlotViewer = ({ plotConfig }: Props) => {
           layout={{
             width: 640,
             height: 480,
-            title: { text: plotConfig.title || 'Plot' },
+            title: { text: plotConfig.title || { text: 'Plot' } },
             xaxis: {
               range: [plotConfig.xMin, plotConfig.xMax]
             },
