@@ -18,7 +18,7 @@ Maybe this could have been done with the config.ts in continue.dev but it did no
 
 So first we add a new model to the config.yaml
 
-```yaml ~/.continue/config.yaml
+```yaml
 models:
   - name: (local) Dependency Checker
     provider: llama.cpp
@@ -28,7 +28,7 @@ models:
 
 Then a slash command to simply pass the package.json contents to the chat.
 
-```yaml ~/.continue/config.yaml
+```yaml
 prompts:
   - name: Dependencies
     description: Verify dependencies in the mentioned files
