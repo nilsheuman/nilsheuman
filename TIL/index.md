@@ -2,6 +2,9 @@
 
 Maybe these little snippets/articles will help someone.
 
+### [Verify LLM Dependencies](2025-05-02-verify-llm-dependencies)
+Mock openai compatible completions server for continue.dev that checks if dependencies in generated code exist.
+
 ### [Draw Graphs with LLM](2025-04-25-draw-graphs-with-llm)
 Custom prompt and some additions to the llama.cpp frontend to draw graphs directly from a prompt.
 
