@@ -40,7 +40,7 @@ Then of course we need to create the webserver. Current code is very experimenta
 
 This would be the overall structure extracted from the proof of concept:
 
-```javascript main.js
+```javascript
 function writeToStream(res, content, stop=false) {
     const baseResponse = {
         // this needs a few params or continue won't read the response
